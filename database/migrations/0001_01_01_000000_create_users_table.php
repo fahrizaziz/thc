@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['super admin', 'koordinator pic community', 'koordinator pic participant', 'koordinator pic product', 'koordinator pic clinic', 'koordinator pic packages', 'customer care', 'front liner', 'finance']);
             $table->rememberToken();
             $table->timestamps();
         });
